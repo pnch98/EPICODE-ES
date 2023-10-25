@@ -3,6 +3,10 @@ body {
     font-weight: 400;
 }
 
+p {
+    font-size: 0.9em;
+}
+
 header {
     text-align: center;
 }
@@ -11,6 +15,7 @@ header img {
     width: 12%;
     margin: 0.8em auto;
 }
+
 header p {
     font-size: 0.6em;
     border-top: 0.2em solid rgba(209, 192, 36, 0.5);
@@ -27,10 +32,6 @@ main {
 main h1 {
     text-align: center;
     font-size: 1.8em;
-}
-
-main p {
-    font-size: 0.9em;
 }
 
 main figure {
@@ -73,6 +74,7 @@ section h2 {
 }
 
 section h3 {
+    font-size: 1em;
     margin-top: 1.5em;
 }
 
