@@ -1,0 +1,156 @@
+/*-------------- GENERALI ---------------*/
+html{
+    font-size: 82.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.bg-dark {
+    background-color: #222f3f;
+}
+
+.bg-light {
+    color: #eaeded;
+    background-color: #36475A;
+}
+
+.bg-light a{
+    color: #eaeded;
+    text-decoration: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 0.7em;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+li {font-size: 1.1em;}
+
+/*-------------- HEADER ---------------*/
+.hdr img {
+    margin: 0.5em 2em;
+    height: 40px;
+}
+
+.bg-light ul li {
+    display: inline-block;
+    padding: 0.5em 0.5em;
+}
+
+.bg-light ul li:hover{
+    background-color: #222f3f;
+}
+
+.hdr ul:first-child {
+    padding-left: 2em;
+}
+
+/*-------------- MAIN ---------------*/
+main {
+    background-color: #E9EDEE;
+    padding: 2em;
+}
+
+.banners {
+    color: white;
+    margin-bottom: 2em;
+}
+
+.banner1{
+    padding: 0.8em 1em;
+    background-color: #F56600;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.banner2{
+    background-image: url(../images/bg-image.png);
+    background-size: contain;
+    padding: 5rem 0 3rem;
+    line-height: 2em;
+}
+
+/*---------- GIFT SECTION ---------*/
+
+.gifts{
+    background-color: white;
+    padding: 1em 1em 0;
+    margin-bottom: 2em;
+}
+
+.gifts .title {
+    margin-left: 1em;
+}
+
+.links{
+    color: #105868;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.gifts .images img {
+    display: inline-block;
+    border-radius: 25px;
+    box-shadow: 5px 5px 8px rgba(116, 108, 108, 0.336);
+    width: 280px;
+    height: 370px;
+    max-height: 370px;
+    object-fit: cover;
+    margin: 1%;
+}
+
+.gifts .images img:hover {
+    cursor: pointer;
+}
+
+/*------------ SHOP SECTION -----------*/
+
+#shop > div img{
+    width: 100%;
+}
+
+#shop > div:first-of-type {
+    margin-bottom: 2em;
+}
+
+/*-------------- FOOTER ---------------*/
+#f1 {
+    padding: 1rem 0;
+}
+
+#f1 span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#f1 a:hover {
+    color: rgb(163, 163, 240);
+}
+
+#f2 {
+    padding: 5rem 0;
+}
+
+#f2 img {
+    width: 150px;
+}
