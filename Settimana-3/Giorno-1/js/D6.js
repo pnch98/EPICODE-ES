@@ -227,11 +227,12 @@ const movies = [
 console.log("Es. 9:");
 
 let oldest = movies[0];
-for(let i=1; i<movies.length; i++){
-  if(parseInt(movies[i].Year) < parseInt(oldest.Year)){
-    oldest = movies[i];
+movies.forEach(element => {
+  if(parseInt(element.Year) < parseInt(oldest.Year)){
+    oldest = element;
   }
-}
+})
+
 console.log(oldest);
 
 
