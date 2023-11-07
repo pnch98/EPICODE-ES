@@ -73,7 +73,7 @@ console.log("Es. 6:");
 console.log(sommaN(numeri2, 10));
 
 function sommaN(arr, n) {
-  return arr.map(x => x+n);
+  return arr.map(element => element+n);
 }
 
 /* ESERCIZIO 7 (map)
@@ -301,4 +301,3 @@ console.log("Es. 15:");
 
 let anno = '1963';
 console.log(movies.findIndex(element => element.Year === anno));
-
