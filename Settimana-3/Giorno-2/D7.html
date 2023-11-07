@@ -232,36 +232,10 @@
                 td2.innerHTML = "Prodotto" + (i+1);
                 break;
               case 2:
-                // const rand = Math.floor(Math.random * 10);
-                // td2.innerHTML = "n. " + rand;
-                // ho provato a farlo randomico ma non sono riuscito
-                switch(i){
-                  case 0: 
-                    td2.innerHTML = "4";
-                    break;
-                  case 3: 
-                    td2.innerHTML = "2";
-                    break;
-                  default:
-                    td2.innerHTML = "5";
-                    break;
-                }
+                td2.innerText = Math.floor(Math.random() * 10) + 1;
                 break;
               case 3:
-              switch(i){
-                  case 0: 
-                    td2.innerHTML = "10 euro";
-                    break;
-                  case 3: 
-                    td2.innerHTML = "4 euro";
-                    break;
-                  case 2:
-                    td2.innerHTML = "5 euro";
-                    break;
-                  default:
-                    td2.innerHTML = "2 euro";
-                    break;
-                }
+                td2.innerText = Math.floor(Math.random() * 10) + 1 + " euro";
                 break;
             }
             newRow.appendChild(td2);
