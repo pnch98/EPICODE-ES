@@ -1,0 +1,58 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20%;
+    box-sizing: border-box;
+    background-color: #732a85;
+}
+
+.taskCompleted {
+    text-decoration: line-through;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+#inputField, #btnAdd {
+    font-size: 1.5rem;
+}
+
+#inputField {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+#btnAdd {
+    width: 20%;
+    border-radius: 10%;
+    background-color: #08f4f4;
+    padding: 0.5rem;
+}
+
+i {
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button, i {
+    float: right;
+}
+
+p {
+    display: inline;
+    cursor: pointer;
+}
+
+div {
+    margin-bottom: 2rem;
+}

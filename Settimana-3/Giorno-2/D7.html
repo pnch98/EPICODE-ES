@@ -205,9 +205,6 @@
         const table = document.createElement("table");
         const row = document.createElement("tr");
         const th = ["Immagine", "Nome prodotto", "Quantità", "Prezzo"];
-        const td = document.createElement("td");
-
-
 
         for(let i=0; i < th.length; i++) {
           const th2 = document.createElement("th");
@@ -216,33 +213,31 @@
         }
         table.appendChild(row);
 
-        // ho provato a farla automatizzata ma non sono riuscito del tutto
         for(let i=0; i < 5; i++) {
           const newRow = document.createElement("tr");
           for(let j=0; j < th.length; j++) {
-            const td2 = document.createElement("td");
+            const td = document.createElement("td");
             switch(j){
               case 0:
                 const img = document.createElement("img");
                 img.setAttribute("src", "img/focaccia.png");
                 img.setAttribute("width", "100px");
-                td2.appendChild(img);
+                td.appendChild(img);
                 break;
               case 1:
-                td2.innerHTML = "Prodotto" + (i+1);
+                td.innerHTML = "Prodotto" + (i+1);
                 break;
               case 2:
-                td2.innerText = Math.floor(Math.random() * 10) + 1;
+                td.innerText = Math.floor(Math.random() * 10) + 1;
                 break;
               case 3:
-                td2.innerText = Math.floor(Math.random() * 10) + 1 + " euro";
+                td.innerText = Math.floor(Math.random() * 10) + 1 + " euro";
                 break;
             }
-            newRow.appendChild(td2);
+            newRow.appendChild(td);
             table.appendChild(newRow);
           }
         }
-        
         
         myDiv.appendChild(table);
       }
@@ -272,7 +267,7 @@
         const img = document.querySelectorAll("img");
         img.forEach(img => img.style.display = "none")
       }
-      //hideAllImages();
+      hideAllImages();
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
