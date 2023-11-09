@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#container {
+    text-align: center;
+    width: 50%;
+    margin-inline: auto;
+}
+
+main, form, #generateNumber, .singolaTabellina {
+    margin-bottom: 1rem;
+}
+
+.numberCell {
+    display: inline-block;
+    width: 9%;
+    height: 40px;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.numberCell span{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 25%;
+}
+
+.selected {
+    background-color: gray;
+}
+
+#lastNumber {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
