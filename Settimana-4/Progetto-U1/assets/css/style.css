@@ -1,0 +1,94 @@
+/*++++++++++Pagina Welcome+++++++++*/
+
+
+body {
+    background-image: url(../image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+header {
+    margin-bottom: 3em;
+}
+.titoli {
+    font-family: 'Outfit', sans-serif;
+}
+h1 {
+    font-weight: 400;
+    color: #ebebeb;
+    line-height: 0.8em;
+    font-size: 60px;
+    letter-spacing: 2.5px;
+}
+#container {
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+header img {
+    width: 150px;
+    height: auto;
+}
+h3 {
+    color: #d20094;
+    margin-bottom: 0;
+}
+#welc p, #welc ul, #welc input, #welc span {
+    margin-top: 16px;
+    font-size: 16px;
+    margin-bottom: 2.5em;
+}
+#welc ul {
+    line-height: 2em;
+    margin-bottom: 5em;
+}
+#welc span {
+    margin-left: 10px;
+}
+.btnProceed {
+    float: right;
+    background-color: #00FFFF;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 0.7em 2.8em ;
+    box-shadow: #00ffffb9 0px 0px 22px 4px;    
+}
+
+/* +++++++++++Pagina domande+++++++++++++++*/
+
+#timer {
+ float: right;
+}
+
+.risposta:hover {
+    cursor: pointer;
+}
+
+.risposta {
+    width: 45%;
+    height: 50px;
+    color: #ebebeb;
+    margin: 1em;
+    background-color: rgba(255, 255, 255, 0.055);
+    border: none;
+    box-shadow: 0px -1.5px 1px 1px #ebebebcc;
+    border-radius: 50px;
+}
+
+.selected {
+    background-color: #d20094;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.correctAnswer {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgb(0, 247, 255) 0px 0px 22px 4px;
+}
