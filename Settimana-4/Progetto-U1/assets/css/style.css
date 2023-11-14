@@ -3,7 +3,6 @@
 
 /*++++++++++Pagina Welcome+++++++++*/
 
-
 body {
     background-image: url(../image/bg.jpg);
     background-repeat: no-repeat;
@@ -12,12 +11,15 @@ body {
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
+
 header {
     margin-bottom: 3em;
 }
+
 .titoli {
     font-family: 'Outfit', sans-serif;
 }
+
 h1 {
     font-weight: 400;
     color: #ebebeb;
@@ -25,6 +27,7 @@ h1 {
     font-size: 70px;
     letter-spacing: 2.5px;
 }
+
 #container {
     width: 60%;
     height: 90%;
@@ -34,41 +37,59 @@ h1 {
     left: 50%;
     color: white;
 }
+
 header img {
     width: 150px;
     height: auto;
 }
+
 h3 {
     color: #d20094;
     margin-bottom: 0;
 }
-#welc p, #welc ul, #welc input, #welc span {
+
+#welc p,
+#welc ul,
+#welc input,
+#welc span {
     margin-top: 16px;
     font-size: 16px;
     margin-bottom: 2.5em;
 }
+
 #welc ul {
     line-height: 2em;
     margin-bottom: 5em;
 }
+
 #welc span {
     margin-left: 10px;
 }
-.btnProceed {
-    float: right;
+
+.btnWhite {
     background-color: #00FFFF;
     border: none;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
-    padding: 0.7em 2.8em ;
-    box-shadow: #00ffffb9 0px 0px 22px 4px;    
+    padding: 0.7em 2.8em;
+    margin-bottom: 2em;
+
+}
+
+.btnWhite:hover {
+    box-shadow: #00ffffb9 0px 0px 22px 4px;
+    cursor: pointer;
+}
+
+.btnProceed {
+    float: right;
 }
 
 /* +++++++++++Pagina domande+++++++++++++++*/
 
 #timer {
- float: right;
+    float: right;
 }
 
 .risposta:hover {
@@ -93,4 +114,57 @@ h3 {
 
 .correctAnswer {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgb(0, 247, 255) 0px 0px 22px 4px;
+}
+
+
+
+/* +++++++++++Ultima Pagina+++++++++++++++*/
+
+#mainCenter {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7em;
+}
+
+h2 {
+    color: #ebebeb;
+    line-height: 0.8em;
+    font-size: 50px;
+    line-height: 1em;
+}
+
+.star {
+    color: #06061f;
+    margin-inline: auto;
+    font-size: 45px;
+}
+
+#stelline {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+#comment {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #d20094;
+    width: 60%;
+    padding: 0.5em 2em;
+    font-size: 0.7em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    color: white;
+}
+
+#comment:focus {
+    outline: 0;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.btnWhite a{
+    text-decoration: none;
+    color: black;
 }

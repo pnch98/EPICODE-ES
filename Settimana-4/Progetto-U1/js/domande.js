@@ -102,29 +102,29 @@ const questions = [
   var i = 0;
   var risposteCorrette = 0;
 
-  function getQuestion() {
+  function getQuestion(shuffle) {
     const domanda = document.getElementById('domanda');
-    domanda.innerHTML = questions[i].question;
+    domanda.innerHTML = shuffle[i].question;
     const divRisposte = document.getElementById('risposte');
-    const arrayRisposte = Array.from(questions[i].incorrect_answers);
-    arrayRisposte.push(questions[i].correct_answer);
-    arrayRisposte.forEach(risposta => {
+    const arrayRisposte = Array.from(shuffle[i].incorrect_answers);
+    arrayRisposte.push(shuffle[i].correct_answer);
+    const shuffleRisposte = arrayRisposte.sort(answer => Math.random() - 0.5);
+    shuffleRisposte.forEach(risposta => {
         divRisposte.innerHTML += `<button class='risposta'>${risposta}</button>`;
     });
 
     const risposte = document.getElementsByClassName('risposta');
-    console.log(risposteCorrette);
     Array.from(risposte).forEach(risposta => {
         risposta.addEventListener('click', function () {
             risposta.classList.add('selected');
-            if(risposta.innerText === questions[i].correct_answer){        
+            if(risposta.innerText === shuffle[i].correct_answer){        
                 risposteCorrette++;
                 risposta.classList.add('correctAnswer');
             }
             function wait(){
                 i++;
                 divRisposte.innerHTML = '';
-                getQuestion();
+                getQuestion(shuffle);
             }
             setTimeout(wait,1000);
         });
@@ -132,7 +132,7 @@ const questions = [
   }
 
 
-
   window.onload = function (){
-      getQuestion();
+    const shuffle = Array.from(questions).sort(question => Math.random() - 0.5);
+    getQuestion(shuffle);
   }
