@@ -104,36 +104,35 @@ const questions = [
 
   function getQuestion() {
     const domanda = document.getElementById('domanda');
-        domanda.innerHTML = questions[i].question;
-        const divRisposte = document.getElementById('risposte');
-        const arrayRisposte = Array.from(questions[i].incorrect_answers);
-        arrayRisposte.push(questions[i].correct_answer);
-        arrayRisposte.forEach(risposta => {
-            divRisposte.innerHTML += `<button class='risposta'>${risposta}</button>`;
+    domanda.innerHTML = questions[i].question;
+    const divRisposte = document.getElementById('risposte');
+    const arrayRisposte = Array.from(questions[i].incorrect_answers);
+    arrayRisposte.push(questions[i].correct_answer);
+    arrayRisposte.forEach(risposta => {
+        divRisposte.innerHTML += `<button class='risposta'>${risposta}</button>`;
+    });
+
+    const risposte = document.getElementsByClassName('risposta');
+    console.log(risposteCorrette);
+    Array.from(risposte).forEach(risposta => {
+        risposta.addEventListener('click', function () {
+            risposta.classList.add('selected');
+            if(risposta.innerText === questions[i].correct_answer){        
+                risposteCorrette++;
+                risposta.classList.add('correctAnswer');
+            }
+            function wait(){
+                i++;
+                divRisposte.innerHTML = '';
+                getQuestion();
+            }
+            setTimeout(wait,1000);
         });
-
-        const risposte = document.getElementsByClassName('risposta');
-        console.log(risposteCorrette);
-        Array.from(risposte).forEach(risposta => {
-            risposta.addEventListener('click', function () {
-                risposta.classList.add('selected');
-                if(risposta.innerText === questions[i].correct_answer){        
-                    risposteCorrette++;
-                    risposta.classList.add('correctAnswer');
-                }
-                function wait(){
-                    i++;
-                    divRisposte.innerHTML = '';
-                    getQuestion();
-                }
-                setTimeout(wait,1000);
-            });
-        })  
-
+    })
   }
 
 
 
-    window.onload = function (){
-        getQuestion();
-    }
+  window.onload = function (){
+      getQuestion();
+  }

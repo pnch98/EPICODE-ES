@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 /*++++++++++Pagina Welcome+++++++++*/
 
 
@@ -5,7 +8,6 @@ body {
     background-image: url(../image/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-   
     font-size: 2em;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
@@ -20,11 +22,11 @@ h1 {
     font-weight: 400;
     color: #ebebeb;
     line-height: 0.8em;
-    font-size: 60px;
+    font-size: 70px;
     letter-spacing: 2.5px;
 }
 #container {
-    width: 50%;
+    width: 60%;
     height: 90%;
     position: absolute;
     transform: translate(-50%, -50%);
