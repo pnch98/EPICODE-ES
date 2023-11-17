@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <img src="assets/image/epicode_logo.png" alt="Logo di epicode">
+        </header>
+        <main id="mainCenter">
+            <h2 class="titoli">Results</h2>
+            <p id="summary">The summary of your answers:</p>
+            <div id="flex">
+                    <div id="correct">
+                        <h2>Correct</h2>
+                    </div>
+                    <div>
+                        <canvas id="myChart" width="100%"></canvas>
+                        <div id="graficoSuccess"></div>  
+                    </div>
+                    <div id="wrong">
+                        <h2>Wrong</h2>
+                    </div>             
+            </div>
+            <button class="btnWhite" id="btnRate">RATE US</button>           
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="assets/js/risultati.js"></script>
+
+</body>
+
+</html>

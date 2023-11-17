@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +13,30 @@
         <header>
             <img src="assets/image/epicode_logo.png" alt="Logo di epicode">
         </header>
+
         <main>
             <div id="welc">
                 <h1 class="titoli">Welcome to <br><b>your exam</b></h1>
                 <h3 class="titoli">Instructions</h3>
-                <p>We don't expect most engeniers to know this answers to all of these <br> question, so don't worry if you're unsure of a few of them.</p>
+                <p>We don't expect most engeniers to know this answers to all of these <br> question, so don't worry if
+                    you're unsure of a few of them.</p>
                 <ul>
                     <li>Each question is <b>timed</b> and can only be <b>answered once.</b></li>
                     <li>Changing browser tab or opening other windows will <b>invalidate the question.</b></li>
                     <li>This exam will take approx. <b>0-5 minutes.</b></li>
                 </ul>
-                <input type="checkbox" required><span>I promise to answer myself without help from anyone</span>
-                <button class="btnWhite btnProceed">PROCEED</button>
+                <form>
+                    <label class="control control-checkbox">
+                        <input type="checkbox" required />
+                        <div class="control_indicator"></div>
+                        <span><b>I promise to answer myself without help from anyone</b></span>
+                    </label>
+                    <button class="btnWhite btnProceed">PROCEED</button>
+                </form>
             </div>
         </main>
     </div>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>

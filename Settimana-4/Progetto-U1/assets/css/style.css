@@ -1,19 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 /*++++++++++Pagina Welcome+++++++++*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
 
 body {
-    background-image: url(../image/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 2em;
+    background: rgb(12, 17, 59);
+    background: linear-gradient(123deg, rgba(12, 17, 59, 1) 0%, rgba(12, 17, 59, 1) 52%, rgba(63, 23, 73, 1) 55%, rgba(122, 64, 138, 1) 65%, rgba(93, 23, 122, 1) 70%, rgba(122, 64, 138, 1) 75%, rgba(76, 31, 92, 1) 85%, rgba(12, 17, 59, 1) 88%);
+    color: #ebebeb;
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
     box-sizing: border-box;
 }
 
 header {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
 .titoli {
@@ -23,13 +30,26 @@ header {
 h1 {
     font-weight: 400;
     color: #ebebeb;
-    line-height: 0.8em;
-    font-size: 70px;
+    line-height: 4rem;
+    font-size: 5rem;
     letter-spacing: 2.5px;
 }
 
+h2 {
+    color: #ebebeb;
+    line-height: 1.2em;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#mainCenter {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+
 #container {
-    width: 60%;
+    width: 55%;
     height: 90%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -39,45 +59,104 @@ h1 {
 }
 
 header img {
-    width: 150px;
+    width: 180px;
     height: auto;
 }
 
 h3 {
+    font-size: 2rem;
     color: #d20094;
-    margin-bottom: 0;
-}
-
-#welc p,
-#welc ul,
-#welc input,
-#welc span {
-    margin-top: 16px;
-    font-size: 16px;
-    margin-bottom: 2.5em;
+    margin-bottom: 0.7rem;
 }
 
 #welc ul {
-    line-height: 2em;
-    margin-bottom: 5em;
+    line-height: 2rem;
+    margin-bottom: 6em;
 }
 
-#welc span {
-    margin-left: 10px;
+p, 
+#pezzodimerda,
+#numberQuestion{
+    margin-bottom: 3rem;
+}
+
+.control {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    height: 20px;
+    width: 20px;
+    background: #ffffff00;
+    border: 3px solid #ebebeb;
+    border-radius: 0px;
+}
+
+.control:hover input~.control_indicator,
+
+.control input:checked~.control_indicator {
+    background: #00ccff00;
+}
+
+.control:hover input:not([disabled]):checked~.control_indicator,
+
+.control input:checked:focus~.control_indicator {
+    background: #0e664700;
+}
+
+.control input:disabled~.control_indicator {
+    background: #e6e6e6;
+    opacity: 35;
+    pointer-events: none;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 5px;
+    bottom: 3px;
+    width: 10px;
+    height: 20px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(35deg);
 }
 
 .btnWhite {
     background-color: #00FFFF;
     border: none;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
     padding: 0.7em 2.8em;
-    margin-bottom: 2em;
-
 }
 
-.btnWhite:hover {
+.btnWhite:hover,
+#btnRisultati:hover {
     box-shadow: #00ffffb9 0px 0px 22px 4px;
     cursor: pointer;
 }
@@ -88,8 +167,8 @@ h3 {
 
 /* +++++++++++Pagina domande+++++++++++++++*/
 
-#timer {
-    float: right;
+#domanda {
+    font-size: 3rem;
 }
 
 .risposta:hover {
@@ -97,60 +176,156 @@ h3 {
 }
 
 .risposta {
-    width: 45%;
-    height: 50px;
+    width: 40%;
+    height: 60px;
     color: #ebebeb;
     margin: 1em;
     background-color: rgba(255, 255, 255, 0.055);
     border: none;
     box-shadow: 0px -1.5px 1px 1px #ebebebcc;
     border-radius: 50px;
+    font-size: 1rem;
 }
 
 .selected {
     background-color: #d20094;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, #ebebebcc 0px -1.5px 1px 1px ;
 }
 
 .correctAnswer {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgb(0, 247, 255) 0px 0px 22px 4px;
 }
 
+#pink{
+    color: #d20094;
+}
+
+#numberQuestion {
+    margin-bottom: 2rem;
+    margin-top: auto;
+}
+
+span,
+#comment,
+#inBlue,
+#pink {
+    font-size: 1.2rem;
+}
+
+.countdown {
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 80%;
+    max-width: 150px;
+    width: 100%;
+}
+
+/*+++++++++++++++++++ Risultati ++++++++++++++++*/
+
+#summary {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#correct {    
+    text-align: left;   
+}
+
+#myChart {
+    position: relative;
+    left: -2%;
+    height: 400px !important;
+    width: 400px !important;
+}
+
+#wrong {   
+    text-align: right;   
+}
+
+#correct h2,
+#wrong h2 {
+    margin-bottom: 0;
+}
+
+#correct p, 
+#wrong p {
+    font-size: 1.3rem;
+    color: rgba(235, 235, 235, 0.85);
+    margin-top: 0;
+}
+
+#correct h2:first-of-type,
+#wrong h2:first-of-type {
+    font-weight: 400;
+}
+
+#btnRate {
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px 1px #00FFFF;
+    color: #ebebeb;
+    width: 250px;
+}
+
+#inBlue {
+    color: #00FFFF;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+h4 {
+    margin: 0;
+}
+
+#graficoSuccess {
+    margin-top: -275px;
+    margin-right: 2%;
+    margin-bottom: 180px;
+}
+
+#piccolo {
+    font-size: 0.8rem;
+    color: rgba(235, 235, 235, 0.85);
+}
 
 
 /* +++++++++++Ultima Pagina+++++++++++++++*/
 
-#mainCenter {
-    text-align: center;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.7em;
-}
-
-h2 {
-    color: #ebebeb;
-    line-height: 0.8em;
-    font-size: 50px;
-    line-height: 1em;
-}
-
-.star {
-    color: #06061f;
+ion-icon {
+    visibility: visible;
+    cursor: pointer;
     margin-inline: auto;
-    font-size: 45px;
+    font-size: 50px;
+}
+
+.starInactive {
+    color: #06061f;
+}
+
+.starActive,
+.overStarActive {
+    color: #00FFFF;
 }
 
 #stelline {
-    width: 100%;
-    margin-bottom: 3em;
+    word-spacing: 1rem;
+    margin-bottom: 4rem;
 }
 
 #comment {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #d20094;
-    width: 60%;
+    width: 80%;
     padding: 0.5em 2em;
-    font-size: 0.7em;
     margin-top: 2em;
     margin-bottom: 3em;
     color: white;
@@ -160,11 +335,17 @@ h2 {
     outline: 0;
 }
 
-.star:hover {
-    cursor: pointer;
-}
-
-.btnWhite a{
+.btnWhite a {
     text-decoration: none;
     color: black;
 }
+
+#recommend, label {
+    font-size: 1.8rem;
+    color: rgba(235, 235, 235, 0.637);
+}
+
+#recommend {
+    margin-bottom: 2rem;
+}
+
