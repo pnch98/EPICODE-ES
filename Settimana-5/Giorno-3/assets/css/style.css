@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+header {
+  margin-bottom: 132px; /*do margine altrimenti nav fixed copre il titolo */
+}
+nav {
+  background-color: #fef7e2;
+  position: fixed;
+  width: 100%; /* metto width altrimenti si restringe */
+  top: 0;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+nav ul li:not(#shop),
+button {
+  background-color: #ffdf7f;
+  border: none;
+  border-radius: 40px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+#shop {
+  background-color: #ffdf7f;
+  border: none;
+  border-radius: 40px;
+  max-width: 150px;
+  min-height: 100px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+}
+nav ul img {
+  width: 50px;
+}
+
+/*---------MAIN---------*/
+main {
+  padding: 1rem;
+}
+.container1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  background-color: #fef7e2;
+  border-radius: 30px;
+}
+.card img {
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+span {
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  margin-bottom: 0.5rem;
+  width: 200px;
+}
+
+/*-----------SECTION------------*/
+section {
+  background-color: #fef7e2;
+  border-radius: 20px;
+  padding: 1rem;
+}
+section p {
+  font-size: 0.8rem;
+}
+section img {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+  header {
+    margin-bottom: 0;
+  }
+  nav {
+    position: unset;
+    top: unset;
+    width: 200px;
+    height: 100vh;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    background-color: #ffdf7f;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #shop {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section img {
+    max-width: 600px;
+    max-height: 600px;
+    flex-grow: 1;
+    order: -1;
+    margin-right: 1rem;
+  }
+}
